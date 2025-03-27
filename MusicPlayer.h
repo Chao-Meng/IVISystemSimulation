@@ -9,26 +9,27 @@
  * methods to load a playlist from a file, play, pause, skip to the next song, and show the
  * status of the player.
  */
+#pragma once
 #ifndef MUSICPLAYER_H
 #define MUSICPLAYER_H
 
 #include <string>
+#include <vector>
 
-using std::vector;
 using std::string;
 
 class MusicPlayer{
     private:
-        vector<string> playlist;
+        std::vector<std::string> playlist;
         int currentSongIndex;
         bool isPlaying;
-        
+
     public:
-    MusicPlayer();
-    void loadPlaylist(const string& filename);
-    void play();
-    void pause();
-    void next();
-    void showStatus();
+        MusicPlayer();
+        void loadPlaylist(const string& filename);
+        void play();
+        void pause();
+        void next();
+        void showStatus();
 };
 #endif
