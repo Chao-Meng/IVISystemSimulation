@@ -59,13 +59,13 @@ void MusicPlayer::next(){
         cout << "Playlist is empty" << endl;
         return;
     }
-    if(isPlaying){
-        cout << "Playing: < " << playlist[currentSongIndex] << "> "<< endl;
-    }
-    else{
-        cout << "Paused: < " << playlist[currentSongIndex] << "> "<< endl;
-    }
     currentSongIndex = (currentSongIndex + 1) % playlist.size();
+    
+    if(isPlaying){
+        cout << "Next song is playing: <" << playlist[currentSongIndex] << ">" << endl;
+    } else {
+        cout << "Next song is paused: <" << playlist[currentSongIndex] << ">" << endl;
+    }
 }
 
 void MusicPlayer::showStatus(){
