@@ -22,6 +22,7 @@ class MusicPlayer{
         vector<string> playlist;
         int currentSongIndex;
         bool isPlaying;
+        
     public:
     MusicPlayer();
     void loadPlaylist(const string& filename);
