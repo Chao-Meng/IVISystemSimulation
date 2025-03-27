@@ -1,16 +1,27 @@
 #include "MusicPlayer.h"
+#include "Navigation.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
 int main(){
-    MusicPlayer player;
-    player.loadPlaylist("my_songs.txt");
-    player.play();
-    player.next();
-    player.pause();
-    // player.next();
+    // MusicPlayer player;
+    // player.loadPlaylist("my_songs.txt");
     // player.play();
     // player.next();
-    player.showStatus();
+    // player.pause();
+
+    // player.showStatus();
+
+    Navigation nav;
+    cout<<" The default route is: "<<endl;
+    nav.showRoute();
+
+    cout<<"Setting a new route: "<<endl;
+    nav.setRoute("Toronto", "Ottawa");
+    nav.showRoute();
+
+
     return 0;
 }
 // #include <iostream>
