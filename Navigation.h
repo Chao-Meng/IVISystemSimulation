@@ -9,9 +9,13 @@ class Navigation {
         Navigation();
         void setRoute(const string& start, const string& destination);
         void showRoute();
+        void startNavigation();
+        void pauseNavigation();
+        void stopNavigation();
     private:
        string startLocation;
        string destinationLocation;
+       bool isNavigating;
 };
 
 #endif

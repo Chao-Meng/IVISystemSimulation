@@ -20,7 +20,10 @@ int main(){
     cout<<"Setting a new route: "<<endl;
     nav.setRoute("Toronto", "Ottawa");
     nav.showRoute();
-
+    nav.startNavigation();
+    nav.pauseNavigation();
+    nav.startNavigation();
+    nav.stopNavigation();
 
     return 0;
 }
