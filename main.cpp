@@ -62,8 +62,8 @@ int main(){
                     cout << "4. show status\n";
                     cout << "0. main menu\n";
                     cout << "choice: ";
-                    std::cin >> subChoice;
-                    std::cin.ignore();
+                    cin >> subChoice;
+                    cin.ignore();
                     switch (subChoice) {
                         case 1:
                             music.play();
@@ -91,6 +91,7 @@ int main(){
                 string start, dest;
                 cout << "\n--- Navigation ---\n";
                 cout << "Input your start location: ";
+                cin.ignore();
                 getline(cin, start);
                 cout << "Input your destination: ";
                 getline(cin, dest);
@@ -120,7 +121,7 @@ int main(){
                         case 3:
                             settings.showSettings();
                             break;
-                        case 0:
+                        case 4:
                             cout << "Exit\n";
                             break;
                         default:
@@ -129,7 +130,7 @@ int main(){
                 } while (subChoice != 0);
                 break;
             }
-            case 0:
+            case 4:
                 cout << "Exit\n";
                 break;
             default:
