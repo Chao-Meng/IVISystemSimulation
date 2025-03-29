@@ -9,7 +9,7 @@ using std::endl;
 using std::getline;
 
 void displayMenu(){
-    cout << "IVI System" << endl;
+    cout << "--- IVI System ---" << endl;
     cout << "1. Music Player" << endl;
     cout << "2. Navigation" << endl;
     cout << "3. Settings" << endl;
@@ -127,7 +127,7 @@ int main(){
                         default:
                             cout << "Void, try again\n";
                     }
-                } while (subChoice != 0);
+                } while (subChoice != 4);
                 break;
             }
             case 4:
