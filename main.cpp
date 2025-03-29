@@ -1,5 +1,6 @@
 #include "MusicPlayer.h"
 #include "Navigation.h"
+#include "Settings.h"
 #include <iostream>
 
 using std::cout;
@@ -13,17 +14,25 @@ int main(){
 
     // player.showStatus();
 
-    Navigation nav;
-    cout<<" The default route is: "<<endl;
-    nav.showRoute();
+    // Navigation nav;
+    // cout<<" The default route is: "<<endl;
+    // nav.showRoute();
 
-    cout<<"Setting a new route: "<<endl;
-    nav.setRoute("Toronto", "Ottawa");
-    nav.showRoute();
-    nav.startNavigation();
-    nav.pauseNavigation();
-    nav.startNavigation();
-    nav.stopNavigation();
+    // cout<<"Setting a new route: "<<endl;
+    // nav.setRoute("Toronto", "Ottawa");
+    // nav.showRoute();
+    // nav.startNavigation();
+    // nav.pauseNavigation();
+    // nav.startNavigation();
+    // nav.stopNavigation();
+
+    Settings settings;
+    cout<<"The default settings are: "<<endl;
+    settings.showSettings();
+    cout<<"Toggling voice control: "<<endl;
+    settings.toggleVoiceControl();
+    cout<<"Toggling safety mode: "<<endl;
+    settings.toggleSafetyMode();
 
     return 0;
 }
